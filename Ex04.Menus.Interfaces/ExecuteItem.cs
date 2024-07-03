@@ -6,11 +6,6 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-    public interface IPickOptionListener
-    {
-        void PickOption();
-    }
-
     public class ExecuteItem : MenuItem
     {
         private List<IPickOptionListener> PickOptionListeners;
