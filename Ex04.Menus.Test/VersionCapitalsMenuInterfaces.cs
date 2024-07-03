@@ -34,6 +34,7 @@ namespace Ex04.Menus.Test
             versionExecute.AddPickOptionListener(testVersion);
             i_VersionAndCapitalsMenu.AddItemToMenu(versionExecute);
         }
+
         private void fillCountCapitals(SubMenu i_VersionAndCapitalsMenu)
         {
             ExecuteItem capitalsExecute = new ExecuteItem("Count Capitals");

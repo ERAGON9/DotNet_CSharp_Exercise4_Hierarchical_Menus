@@ -6,12 +6,23 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Events
 {
-    public class MenuItem
+    public abstract class MenuItem
     {
+        private readonly string m_Title;
 
-        public void Show()
-        {
-
+        public string Title 
+        { 
+            get 
+            { 
+                return m_Title;
+            }
         }
+
+        public MenuItem(string i_Title)
+        {
+            m_Title = i_Title;
+        }
+
+        public abstract void Show();
     }
 }

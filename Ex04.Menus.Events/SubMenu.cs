@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Events
 {
-    public class MainMenu : Menu
+    public class SubMenu : Menu
     {
-        public MainMenu(string i_Title) : base(i_Title, "Exit")
+        public SubMenu(string i_Title) : base(i_Title, "Back")
         {
         }
     }

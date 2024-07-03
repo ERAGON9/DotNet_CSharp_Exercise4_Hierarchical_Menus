@@ -29,7 +29,6 @@ namespace Ex04.Menus.Interfaces
         {
             Console.Clear();
             OnPickOptionListeners();
-
         }
 
         private void OnPickOptionListeners()

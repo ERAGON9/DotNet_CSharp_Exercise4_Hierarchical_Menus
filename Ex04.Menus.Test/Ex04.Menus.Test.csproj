@@ -36,10 +36,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateTimeMenuEvents.cs" />
     <Compile Include="DateTimeMenuInterfaces.cs" />
+    <Compile Include="MenuEvents.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="MenuInterfaces.cs" />
     <Compile Include="TestManager.cs" />
+    <Compile Include="VersionCapitalsMenuEvents.cs" />
     <Compile Include="VersionCapitalsMenuInterfaces.cs" />
   </ItemGroup>
   <ItemGroup>
