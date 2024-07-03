@@ -6,12 +6,23 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-    internal class Menu : MenuItem
+    public abstract class Menu : MenuItem
     {
         private List<MenuItem> m_MenuItems;
 
         public Menu(string i_Title) : base(i_Title)
         {
+            m_MenuItems = new List<MenuItem>();
+        }
+
+        public void AddItemToMenu(MenuItem item)
+        {
+            m_MenuItems.Add(item);
+        }
+
+        public void RemoveItemFromMenu(MenuItem item)
+        {
+            m_MenuItems.Remove(item);
         }
 
         public override void Show()
@@ -20,6 +31,7 @@ namespace Ex04.Menus.Interfaces
 
             while (stillRunning)
             {
+                Console.Clear();
                 printMenu();
                 int userPick = getUserPick();
 
@@ -31,7 +43,6 @@ namespace Ex04.Menus.Interfaces
                 {
                     m_MenuItems[userPick].Show();
                 }
-
 
             }
         }
@@ -48,9 +59,11 @@ namespace Ex04.Menus.Interfaces
                 index++;
             }
 
-            Console.WriteLine("0 -> Exit");
+            printQuitMenu();
             Console.WriteLine("-------------------------");
         }
+
+        protected abstract void printQuitMenu();
 
         private int getUserPick()
         {

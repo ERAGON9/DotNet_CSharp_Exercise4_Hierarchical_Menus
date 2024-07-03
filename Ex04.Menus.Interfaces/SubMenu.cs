@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-    public class MainMenu : Menu
+    public class SubMenu : Menu
     {
-        public MainMenu(string i_Title) : base(i_Title)
+
+        public SubMenu(string i_Title) : base(i_Title)
         {
             
         }
 
         protected override void printQuitMenu()
         {
-            Console.WriteLine("0 -> Exit");
+            Console.WriteLine("0 -> Back");
         }
-
     }
 }
