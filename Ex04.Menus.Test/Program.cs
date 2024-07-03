@@ -10,7 +10,8 @@ namespace Ex04.Menus.Test
     {
         public static void Main()
         {
-
+            TestManager test = new TestManager();
+            test.Run();
         }
     }
 }

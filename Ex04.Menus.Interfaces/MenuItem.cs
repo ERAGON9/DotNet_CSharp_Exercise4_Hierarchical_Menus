@@ -8,17 +8,13 @@ namespace Ex04.Menus.Interfaces
 {
     public abstract class MenuItem
     {
-        private string m_Title;
+        private readonly string m_Title;
 
         public string Title 
         { 
             get 
             { 
                 return m_Title;
-            }
-            set
-            {
-                m_Title = value;
             }
         }
 
@@ -28,6 +24,5 @@ namespace Ex04.Menus.Interfaces
         }
 
         public abstract void Show();
-
     }
 }

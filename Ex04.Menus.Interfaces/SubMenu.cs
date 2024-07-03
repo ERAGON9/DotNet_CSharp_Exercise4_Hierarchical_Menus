@@ -8,15 +8,8 @@ namespace Ex04.Menus.Interfaces
 {
     public class SubMenu : Menu
     {
-
-        public SubMenu(string i_Title) : base(i_Title)
+        public SubMenu(string i_Title) : base(i_Title, "Back")
         {
-            
-        }
-
-        protected override void printQuitMenu()
-        {
-            Console.WriteLine("0 -> Back");
         }
     }
 }

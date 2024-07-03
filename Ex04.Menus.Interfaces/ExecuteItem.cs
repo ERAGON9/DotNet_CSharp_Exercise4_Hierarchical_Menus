@@ -11,7 +11,7 @@ namespace Ex04.Menus.Interfaces
         void PickOption();
     }
 
-    internal class ExecuteItem : MenuItem
+    public class ExecuteItem : MenuItem
     {
         private List<IPickOptionListener> PickOptionListeners;
 
@@ -47,6 +47,5 @@ namespace Ex04.Menus.Interfaces
                 }
             }
         }
-
     }
 }

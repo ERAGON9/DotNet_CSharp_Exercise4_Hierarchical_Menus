@@ -36,7 +36,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateTimeMenuInterfaces.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="MenuInterfaces.cs" />
+    <Compile Include="TestManager.cs" />
+    <Compile Include="VersionCapitalsMenuInterfaces.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ex04.Menus.Events\Ex04.Menus.Events.csproj">
+      <Project>{b4c8bbe1-0e08-428e-b0bf-3ab47f352896}</Project>
+      <Name>Ex04.Menus.Events</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ex04.Menus.Interfaces\Ex04.Menus.Interfaces.csproj">
+      <Project>{7b5de7de-5075-48a7-a3ff-428c2e2ae1f5}</Project>
+      <Name>Ex04.Menus.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

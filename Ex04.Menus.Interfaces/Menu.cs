@@ -9,10 +9,12 @@ namespace Ex04.Menus.Interfaces
     public abstract class Menu : MenuItem
     {
         private List<MenuItem> m_MenuItems;
+        private string m_QuitWord;
 
-        public Menu(string i_Title) : base(i_Title)
+        public Menu(string i_Title, string i_QuitWord) : base(i_Title)
         {
             m_MenuItems = new List<MenuItem>();
+            m_QuitWord = i_QuitWord;
         }
 
         public void AddItemToMenu(MenuItem item)
@@ -41,9 +43,8 @@ namespace Ex04.Menus.Interfaces
                 }
                 else
                 {
-                    m_MenuItems[userPick].Show();
+                    m_MenuItems[userPick - 1].Show();
                 }
-
             }
         }
 
@@ -59,11 +60,9 @@ namespace Ex04.Menus.Interfaces
                 index++;
             }
 
-            printQuitMenu();
+            Console.WriteLine($"0 -> {m_QuitWord}");
             Console.WriteLine("-------------------------");
         }
-
-        protected abstract void printQuitMenu();
 
         private int getUserPick()
         {
@@ -87,17 +86,16 @@ namespace Ex04.Menus.Interfaces
 
             if (itemsNumber > 1)
             {
-                Console.WriteLine($"Please enter request: (1 to {itemsNumber} or press '0' to Exit)");
+                Console.WriteLine($"Please enter request: (1 to {itemsNumber} or press '0' to {m_QuitWord})");
             }
             else if (itemsNumber == 1)
             {
-                Console.WriteLine($"Please enter request: (1 or press '0' to Exit)");
+                Console.WriteLine($"Please enter request: (1 or press '0' to {m_QuitWord})");
             }
             else
             {
-                Console.WriteLine($"Please enter request: (press '0' to Exit)");
+                Console.WriteLine($"Please enter request: (press '0' to {m_QuitWord})");
             }
         }
-
     }
 }
