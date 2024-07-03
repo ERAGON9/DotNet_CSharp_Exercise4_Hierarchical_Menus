@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-    public class MainMenu : Menu
+    internal class ExecuteItem : MenuItem
     {
-        public MainMenu(string i_Title) : base(i_Title)
-        {
-            
-        }
+
 
     }
 }
