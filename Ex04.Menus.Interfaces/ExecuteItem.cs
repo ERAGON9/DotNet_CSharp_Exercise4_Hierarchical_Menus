@@ -8,21 +8,21 @@ namespace Ex04.Menus.Interfaces
 {
     public class ExecuteItem : MenuItem
     {
-        private List<IPickOptionListener> PickOptionListeners;
+        private List<IPickOptionListener> m_PickOptionListeners;
 
         public ExecuteItem(string i_Title) : base(i_Title)
         {
-            PickOptionListeners = new List<IPickOptionListener>();
+            m_PickOptionListeners = new List<IPickOptionListener>();
         }
 
         public void AddPickOptionListener(IPickOptionListener i_listener)
         {
-            PickOptionListeners.Add(i_listener);
+            m_PickOptionListeners.Add(i_listener);
         }
 
         public void RemovePickOptionListener(IPickOptionListener i_listener)
         {
-            PickOptionListeners.Remove(i_listener);
+            m_PickOptionListeners.Remove(i_listener);
         }
 
         public override void Show()
@@ -33,9 +33,9 @@ namespace Ex04.Menus.Interfaces
 
         private void OnPickOptionListeners()
         {
-            if (PickOptionListeners != null)
+            if (m_PickOptionListeners != null)
             {
-                foreach (IPickOptionListener listener in PickOptionListeners)
+                foreach (IPickOptionListener listener in m_PickOptionListeners)
                 {
                     listener.PickOption();
                 }
