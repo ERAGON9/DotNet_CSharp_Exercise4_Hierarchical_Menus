@@ -48,8 +48,8 @@ namespace Ex04.Menus.Test
             void IPickOptionListener.PickOption()
             {
                 DateTime currentDateTime = DateTime.Now;
-                Console.WriteLine("The current time is: {0}", currentDateTime.ToString("HH:mm:ss"));
-                Console.WriteLine("Press any key to continue...");
+                Console.WriteLine($@"The current time is: {currentDateTime:HH:mm:ss}
+Press any key to continue...");
                 Console.ReadKey();
             }
         }
@@ -59,8 +59,8 @@ namespace Ex04.Menus.Test
             void IPickOptionListener.PickOption()
             {
                 DateTime currentDateTime = DateTime.Now;
-                Console.WriteLine("The current date is: {0}", currentDateTime.ToString("dd-MM-yyyy"));
-                Console.WriteLine("Press any key to continue...");
+                Console.WriteLine($@"The current date is: {currentDateTime:dd-MM-yyyy}
+Press any key to continue...");
                 Console.ReadKey();
             }
         }

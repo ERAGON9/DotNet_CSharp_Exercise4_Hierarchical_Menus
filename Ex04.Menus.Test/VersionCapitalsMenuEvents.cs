@@ -44,8 +44,8 @@ namespace Ex04.Menus.Test
 
         private void executeItem_ShowVersion()
         {
-            Console.WriteLine("App Version: 24.2.4.9504");
-            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine($@"App Version: 24.2.4.9504
+Press any key to continue...");
             Console.ReadKey();
         }
 
@@ -63,8 +63,8 @@ namespace Ex04.Menus.Test
                 }
             }
 
-            Console.WriteLine($"There is: {countCapitals} upper case letters at your sentence.");
-            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine($@"There are: {countCapitals} upper case letters in your sentence.
+Press any key to continue...");
             Console.ReadKey();
         }
     }

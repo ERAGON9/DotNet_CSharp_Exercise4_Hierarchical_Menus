@@ -22,10 +22,10 @@ namespace Ex04.Menus.Interfaces
             r_MenuItems.Add(item);
         }
 
-        //public void RemoveItemFromMenu(MenuItem item)
-        //{
-        //    r_MenuItems.Remove(item);
-        //}
+        public void RemoveItemFromMenu(MenuItem item)
+        {
+            r_MenuItems.Remove(item);
+        }
 
         public override void Show()
         {
@@ -50,8 +50,8 @@ namespace Ex04.Menus.Interfaces
 
         private void printMenu()
         {
-            Console.WriteLine($"**{Title}**");
-            Console.WriteLine("-------------------------");
+            Console.WriteLine($@"**{Title}**
+-------------------------");
             int index = 1;
 
             foreach (MenuItem optionItem in r_MenuItems)
@@ -60,9 +60,10 @@ namespace Ex04.Menus.Interfaces
                 index++;
             }
 
-            Console.WriteLine($"0 -> {r_QuitWord}");
-            Console.WriteLine("-------------------------");
+            Console.WriteLine($@"0 -> {r_QuitWord}
+-------------------------");
         }
+
 
         private int getUserPick()
         {

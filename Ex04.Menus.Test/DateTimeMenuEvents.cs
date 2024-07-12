@@ -44,17 +44,17 @@ namespace Ex04.Menus.Test
         private void executeItem_ShowTime()
         {
             DateTime currentDateTime = DateTime.Now;
-            Console.WriteLine("The current time is: {0}", currentDateTime.ToString("HH:mm:ss"));
-            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine($@"The current time is: {currentDateTime:HH:mm:ss}
+Press any key to continue...");
             Console.ReadKey();
         }
 
         private void executeItem_ShowDate()
         {
             DateTime currentDateTime = DateTime.Now;
-            Console.WriteLine("The current date is: {0}", currentDateTime.ToString("dd-MM-yyyy"));
-            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine($@"The current date is: {currentDateTime:dd-MM-yyyy}
+Press any key to continue...");
             Console.ReadKey();
-        }  
+        }
     }
 }
