@@ -28,10 +28,10 @@ namespace Ex04.Menus.Interfaces
         public override void Show()
         {
             Console.Clear();
-            OnPickOptionListeners();
+            onPickOptionListeners();
         }
 
-        private void OnPickOptionListeners()
+        private void onPickOptionListeners()
         {
             if (m_PickOptionListeners != null)
             {

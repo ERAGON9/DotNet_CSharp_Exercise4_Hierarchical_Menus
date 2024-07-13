@@ -17,10 +17,10 @@ namespace Ex04.Menus.Events
         public override void Show()
         {
             Console.Clear();
-            OnPickOptions();
+            onPickOptions();
         }
 
-        private void OnPickOptions()
+        private void onPickOptions()
         {
             PickOptions?.Invoke();
         }
